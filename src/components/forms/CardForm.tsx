@@ -17,14 +17,14 @@ export default function CardForm({ id, name }: CardFormProps) {
   return (
     <Card className="sm:col-span-2">
       <CardHeader className="pb-3">
-        <CardTitle>Formulario # {id}</CardTitle>
+        <CardTitle>{name}</CardTitle>
         <CardDescription className="max-w-lg text-balance leading-relaxed">
-          {name}
+          Formulario # {id}
         </CardDescription>
       </CardHeader>
       <CardFooter className="space-x-2">
-        <Link to={`/detail-form/${id}`}>
-          <Button variant="default">Ver</Button>
+        <Link to={`/design-form/${id}`}>
+          <Button variant="default">Diseñar</Button>
         </Link>
         <Button variant="destructive">Eliminar</Button>
       </CardFooter>

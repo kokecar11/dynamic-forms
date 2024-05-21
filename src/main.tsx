@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Dashboard } from "./pages/Dashboard"
 import { DetailForm } from "./pages/DetailForm"
+import { DesignForm } from "./pages/DesignForm"
 import { SendForm } from "./pages/Form"
 import { PublicOnlyRoute } from "./components/PublicRoute"
 import "./globals.css"
@@ -14,6 +15,16 @@ const router = createBrowserRouter([
       <PublicOnlyRoute>
         <div className="h-screen w-full grid place-items-center">
           <Dashboard />
+        </div>
+      </PublicOnlyRoute>
+    ),
+  },
+  {
+    path: "design-form/:idForm",
+    element: (
+      <PublicOnlyRoute>
+        <div className="h-screen w-full grid place-items-center">
+          <DesignForm />
         </div>
       </PublicOnlyRoute>
     ),
